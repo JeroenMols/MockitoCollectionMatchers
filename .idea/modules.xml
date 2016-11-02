@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mockitocollectionmatchers.iml" filepath="$PROJECT_DIR$/.idea/modules/mockitocollectionmatchers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mockitocollectionmatchers_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mockitocollectionmatchers_main.iml" group="mockitocollectionmatchers" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mockitocollectionmatchers_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mockitocollectionmatchers_test.iml" group="mockitocollectionmatchers" />
+    </modules>
+  </component>
+</project>
