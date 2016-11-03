@@ -36,7 +36,9 @@ public void customMatchers() throws Exception {
 ## Features
 ```java
 verify(mock).someMethod(listContains(expectedObject));
+verify(mock).someMethod(listContains(expectedObject, index));
 verify(mock).someMethod(listDoesNotContain(wrongObject));
+verify(mock).someMethod(listDoesNotContain(wrongObject, index));
 verify(mock).someMethod(listOfSize(3));
 
 verify(mock).someMethod(setContains(expectedObject));
@@ -52,7 +54,7 @@ verify(mock).someMethod(setContains(expectedObject));
 ```
 2) Add a dependency on the library:
 ```groovy
-          testCompile 'com.github.JeroenMols:MockitoCollectionMatchers:0.0.1'
+          testCompile 'com.github.JeroenMols:MockitoCollectionMatchers:0.0.2'
 ```
 
 ## TODO

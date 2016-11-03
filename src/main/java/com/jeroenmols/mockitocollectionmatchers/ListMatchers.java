@@ -16,9 +16,7 @@
 
 package com.jeroenmols.mockitocollectionmatchers;
 
-import com.jeroenmols.mockitocollectionmatchers.list.ListContains;
-import com.jeroenmols.mockitocollectionmatchers.list.ListDoesNotContain;
-import com.jeroenmols.mockitocollectionmatchers.list.ListOfSize;
+import com.jeroenmols.mockitocollectionmatchers.list.*;
 
 import java.util.List;
 
@@ -34,8 +32,16 @@ public class ListMatchers {
         return argThat(new ListContains<K>(object));
     }
 
+    public static <K> List listContains(K object, int index) {
+        return argThat(new ListContainsAtIndex<K>(object, index));
+    }
+
     public static <K> List listDoesNotContain(K... object) {
         return argThat(new ListDoesNotContain<K>(object));
+    }
+
+    public static <K> List listDoesNotContain(K object, int index) {
+        return argThat(new ListDoesNotContainAtIndex<K>(object, index));
     }
 
     public static List listOfSize(int size) {
