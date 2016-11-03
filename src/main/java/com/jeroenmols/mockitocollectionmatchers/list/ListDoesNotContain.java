@@ -25,18 +25,25 @@ import java.util.List;
  */
 public class ListDoesNotContain<T> implements ArgumentMatcher<List> {
 
-    private final T object;
+    private final T[] objects;
 
-    public ListDoesNotContain(T object) {
-        this.object = object;
+    public ListDoesNotContain(T... objects) {
+        this.objects = objects;
     }
 
     public boolean matches(List list) {
-        return !list.contains(object);
+        for (T object : objects) {
+            if (list.contains(object)) return false;
+        }
+        return true;
     }
 
     public String toString() {
         //printed in verification errors
-        return "[list doesn't contain object]";
+        if (objects.length == 1) {
+            return "[list does contain object]";
+        } else {
+            return "[list does contain one or more objects]";
+        }
     }
 }
