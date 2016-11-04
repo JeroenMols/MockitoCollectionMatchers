@@ -1,5 +1,4 @@
 # MockitoCollectionMatchers
-===========================
 [![Build Status][build-status-svg]][build-status-link]
 [![Release][jitpack-svg]][jitpack-link]
 [![MethodCount][methodcount-svg]][methodcount-link]
