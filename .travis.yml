@@ -3,5 +3,8 @@ language: java
 jdk:
     - oraclejdk8
 
+before_script:
+    - chmod a+x gradlew
+
 script:
     "./gradlew check -i"
