@@ -1,4 +1,10 @@
 # MockitoCollectionMatchers
+===========================
+[![Build Status][build-status-svg]][build-status-link]
+[![Release][jitpack-svg]][jitpack-link]
+[![MethodCount][methodcount-svg]][methodcount-link]
+[![License][license-svg]][license-link]
+
 Extension of Mockito that provides easy to use matchers for Collections such as Lists, Sets,...
 
 Simplify your unit tests from:
@@ -67,3 +73,12 @@ verify(mock).someMethod(setContains(expectedObject));
 
 ## Questions
 [@molsjeroen](https://twitter.com/molsjeroen)
+
+[build-status-svg]: https://travis-ci.org/JeroenMols/MockitoCollectionMatchers.svg?branch=master
+[build-status-link]: https://travis-ci.org/JeroenMols/MockitoCollectionMatchers
+[jitpack-svg]: https://jitpack.io/v/jeroenmols/mockitocollectionmatchers.svg
+[jitpack-link]: https://jitpack.io/#jeroenmols/MockitoCollectionMatchers
+[methodcount-svg]: https://img.shields.io/badge/Methods%20count-core:%2040-e91e63.svg
+[methodcount-link]: http://www.methodscount.com/?lib=com.github.JeroenMols%3AMockitoCollectionMatchers%3A%2B
+[license-svg]: https://img.shields.io/:license-apache-blue.svg?style=flat
+[license-link]: https://github.com/JeroenMols/MockitoCollectionMatchers/blob/master/LICENSE
