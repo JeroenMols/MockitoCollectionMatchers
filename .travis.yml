@@ -3,9 +3,5 @@ language: java
 jdk:
     - oraclejdk8
 
-before_install:
-    - chmod a+x gradlew
-
-install: true
-
-script: ./gradlew clean check
+install:
+    - ./gradlew clean check
