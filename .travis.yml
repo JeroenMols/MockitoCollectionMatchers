@@ -3,7 +3,7 @@ language: java
 jdk:
     - oraclejdk8
 
-before_script:
+before_install:
     - chmod a+x gradlew
 
 script: ./gradlew clean check
