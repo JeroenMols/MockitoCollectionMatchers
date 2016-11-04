@@ -6,5 +6,4 @@ jdk:
 before_script:
     - chmod a+x gradlew
 
-script:
-    "./gradlew check -i"
+script: ./gradlew clean check
