@@ -6,4 +6,6 @@ jdk:
 before_install:
     - chmod a+x gradlew
 
+install: ./gradlew assemble --stacktrace
+
 script: ./gradlew clean check
