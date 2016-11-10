@@ -39,6 +39,6 @@ public class ListDoesNotContainAtIndex<T> implements ArgumentMatcher<List> {
 
     public String toString() {
         //printed in verification errors
-        return "[list does contain object at index]";
+        return String.format("[list doesn't contain object: %s at index: %d]", object.toString(), index);
     }
 }
