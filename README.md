@@ -1,5 +1,6 @@
 # MockitoCollectionMatchers
 [![Build Status][build-status-svg]][build-status-link]
+[![Codecov.io][coverage-svg]][coverage-link]
 [![Release][jitpack-svg]][jitpack-link]
 [![MethodCount][methodcount-svg]][methodcount-link]
 [![License][license-svg]][license-link]
@@ -75,6 +76,8 @@ verify(mock).someMethod(setContains(expectedObject));
 
 [build-status-svg]: https://travis-ci.org/JeroenMols/MockitoCollectionMatchers.svg?branch=master
 [build-status-link]: https://travis-ci.org/JeroenMols/MockitoCollectionMatchers
+[coverage-svg]: https://codecov.io/github/JeroenMols/MockitoCollectionMatchers/coverage.svg?branch=master
+[coverage-link]: https://codecov.io/github/JeroenMols/MockitoCollectionMatchers?branch=master
 [jitpack-svg]: https://jitpack.io/v/jeroenmols/mockitocollectionmatchers.svg
 [jitpack-link]: https://jitpack.io/#jeroenmols/MockitoCollectionMatchers
 [methodcount-svg]: https://img.shields.io/badge/Methods%20count-core:%2040-e91e63.svg
