@@ -44,6 +44,10 @@ public class ListMatchers {
         return argThat(new ListDoesNotContainAtIndex<K>(object, index));
     }
 
+    public static List listContainsNull() {
+        return argThat(new ListContainsNull());
+    }
+
     public static List listOfSize(int size) {
         return argThat(new ListOfSize(size));
     }
