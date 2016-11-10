@@ -5,3 +5,8 @@ jdk:
 
 install:
     - ./gradlew clean check
+
+test:
+    post:
+        - ./gradlew jacocoTestReport
+        - bash <(curl -s https://codecov.io/bash) -t uuid-repo-token
