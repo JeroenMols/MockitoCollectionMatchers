@@ -3,8 +3,8 @@ package com.jeroenmols.mockitocollectionmatchers.list;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
+import static com.jeroenmols.mockitocollectionmatchers.list.testhelpers.CollectionHelpers.createListWithObjects;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
@@ -65,12 +65,6 @@ public class ListContainsTest {
         ListContains<Object> listContains = new ListContains<Object>(expectedObject);
 
         assertThat(listContains.toString()).contains(expectedObject.toString());
-    }
-
-    private ArrayList<Object> createListWithObjects(Object... objects) {
-        ArrayList<Object> list = new ArrayList<Object>();
-        list.addAll(Arrays.asList(objects));
-        return list;
     }
 
 }
