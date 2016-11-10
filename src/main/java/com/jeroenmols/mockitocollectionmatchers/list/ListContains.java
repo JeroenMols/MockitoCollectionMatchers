@@ -41,7 +41,7 @@ public class ListContains<T> implements ArgumentMatcher<List> {
     public String toString() {
         //printed in verification errors
         if (objects.length ==1) {
-            return "[list doesn't contain object]";
+            return String.format("[list doesn't contain object: %s]", objects[0].toString());
         } else {
             return "[list doesn't contain all objects]";
         }
