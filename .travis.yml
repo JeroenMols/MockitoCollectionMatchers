@@ -4,9 +4,7 @@ jdk:
     - oraclejdk8
 
 install:
-    - ./gradlew clean check
+    - ./gradlew clean check jacocoTestReport
 
-test:
-    post:
-        - ./gradlew jacocoTestReport
-        - bash <(curl -s https://codecov.io/bash)
+after_success:
+    - bash <(curl -s https://codecov.io/bash)
