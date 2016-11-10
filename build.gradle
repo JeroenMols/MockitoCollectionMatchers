@@ -11,5 +11,6 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile group: 'org.assertj', name: 'assertj-core', version: '1.7.0'
     compile group: 'org.mockito', name: 'mockito-core', version: '2.2.9'
 }
