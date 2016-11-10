@@ -9,4 +9,4 @@ install:
 test:
     post:
         - ./gradlew jacocoTestReport
-        - bash <(curl -s https://codecov.io/bash) -t uuid-repo-token
+        - bash <(curl -s https://codecov.io/bash)
