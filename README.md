@@ -62,7 +62,7 @@ verify(mock).someMethod(setContains(expectedObject));
 ```
 2) Add a dependency on the library:
 ```groovy
-          testCompile 'com.github.JeroenMols:MockitoCollectionMatchers:0.0.2'
+          testCompile 'com.github.JeroenMols:MockitoCollectionMatchers:0.0.3'
 ```
 
 ## TODO
