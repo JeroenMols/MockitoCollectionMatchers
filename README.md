@@ -80,7 +80,7 @@ verify(mock).someMethod(setContains(expectedObject));
 [build-status-link]: https://travis-ci.org/JeroenMols/MockitoCollectionMatchers
 [coverage-svg]: https://codecov.io/github/JeroenMols/MockitoCollectionMatchers/coverage.svg?branch=master
 [coverage-link]: https://codecov.io/github/JeroenMols/MockitoCollectionMatchers?branch=master
-[jitpack-svg]: https://jitpack.io/v/jeroenmols/mockitocollectionmatchers.svg
+[jitpack-svg]: https://jitpack.io/v/jeroenmols/MockitoCollectionMatchers.svg
 [jitpack-link]: https://jitpack.io/#jeroenmols/MockitoCollectionMatchers
 [methodcount-svg]: https://img.shields.io/badge/Methods%20count-core:%2040-e91e63.svg
 [methodcount-link]: http://www.methodscount.com/?lib=com.github.JeroenMols%3AMockitoCollectionMatchers%3A%2B
