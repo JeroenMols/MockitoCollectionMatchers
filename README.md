@@ -43,8 +43,10 @@ public void customMatchers() throws Exception {
 ```java
 verify(mock).someMethod(listContains(expectedObject));
 verify(mock).someMethod(listContains(expectedObject, index));
+verify(mock).someMethod(listContainsNull());
 verify(mock).someMethod(listDoesNotContain(wrongObject));
 verify(mock).someMethod(listDoesNotContain(wrongObject, index));
+verify(mock).someMethod(listDoesNotContainNull());
 verify(mock).someMethod(listOfSize(3));
 
 verify(mock).someMethod(setContains(expectedObject));
