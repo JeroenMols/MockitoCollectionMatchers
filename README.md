@@ -66,11 +66,8 @@ verify(mock).someMethod(setContains(expectedObject));
 ```
 
 ## TODO
-* Add unit tests
 * Add more matchers
 * Support other collections
-* Add CI
-* Add code coverage
 * Upload to JCenter
 
 ## Questions
