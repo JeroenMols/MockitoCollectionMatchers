@@ -3,8 +3,9 @@ package com.jeroenmols.mockitocollectionmatchers.list;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-import static com.jeroenmols.mockitocollectionmatchers.list.testhelpers.CollectionHelpers.createListWithObjects;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
@@ -22,7 +23,7 @@ public class ListContainsNullTest {
 
     @Test
     public void listDoesNotContainNull() throws Exception {
-        ArrayList<Object> list = createListWithObjects(new Object());
+        List<Object> list = Arrays.asList(new Object());
 
         assertThat(new ListContainsNull().matches(list)).isFalse();
     }

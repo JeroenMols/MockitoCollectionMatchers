@@ -2,9 +2,10 @@ package com.jeroenmols.mockitocollectionmatchers.list;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
-import static com.jeroenmols.mockitocollectionmatchers.list.testhelpers.CollectionHelpers.createListWithObjects;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
@@ -14,7 +15,7 @@ public class ListOfSizeTest {
 
     @Test
     public void emptyList() throws Exception {
-        ArrayList<Object> list = createListWithObjects();
+        List<Object> list = Collections.emptyList();
         ListOfSize listOfSize = new ListOfSize(0);
 
         assertThat(listOfSize.matches(list)).isTrue();
@@ -22,7 +23,7 @@ public class ListOfSizeTest {
 
     @Test
     public void listWithSingleObject() throws Exception {
-        ArrayList<Object> list = createListWithObjects(new Object());
+        List<Object> list = Arrays.asList(new Object());
         ListOfSize listOfSize = new ListOfSize(1);
 
         assertThat(listOfSize.matches(list)).isTrue();
@@ -30,7 +31,7 @@ public class ListOfSizeTest {
 
     @Test
     public void errorMessageContainsSizes() throws Exception {
-        ArrayList<Object> list = createListWithObjects(new Object());
+        List<Object> list = Arrays.asList(new Object());
         ListOfSize listOfSize = new ListOfSize(0);
 
         listOfSize.matches(list);
