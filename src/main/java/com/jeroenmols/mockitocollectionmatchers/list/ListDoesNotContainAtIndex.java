@@ -23,7 +23,7 @@ import java.util.List;
 /**
  * @author Jeroen Mols on 11/09/16.
  */
-public class ListDoesNotContainAtIndex<T> implements ArgumentMatcher<List> {
+public class ListDoesNotContainAtIndex<T> implements ArgumentMatcher<List<T>> {
 
     private final T object;
     private final int index;
@@ -33,8 +33,8 @@ public class ListDoesNotContainAtIndex<T> implements ArgumentMatcher<List> {
         this.index = index;
     }
 
-    public boolean matches(List list) {
-        return object != list.get(index);
+    public boolean matches(List<T> list) {
+        return !object.equals(list.get(index));
     }
 
     public String toString() {

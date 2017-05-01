@@ -2,9 +2,9 @@ package com.jeroenmols.mockitocollectionmatchers.list;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-import static com.jeroenmols.mockitocollectionmatchers.list.testhelpers.CollectionHelpers.createListWithObjects;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
@@ -17,7 +17,7 @@ public class ListDoesNotContainTest {
 
     @Test
     public void listWithSingleObject() throws Exception {
-        ArrayList<Object> list = createListWithObjects(new Object());
+        List<Object> list = Arrays.asList(new Object());
 
         ListDoesNotContain<Object> listDoesNotContain = new ListDoesNotContain<Object>(expectedObject);
 
@@ -26,7 +26,7 @@ public class ListDoesNotContainTest {
 
     @Test
     public void listContainsObject() throws Exception {
-        ArrayList<Object> list = createListWithObjects(expectedObject);
+        List<Object> list = Arrays.asList(expectedObject);
 
         ListDoesNotContain<Object> listDoesNotContain = new ListDoesNotContain<Object>(expectedObject);
 
@@ -35,7 +35,7 @@ public class ListDoesNotContainTest {
 
     @Test
     public void listWithMultipleObjects() throws Exception {
-        ArrayList<Object> list = createListWithObjects(new Object(), expectedObject);
+        List<Object> list = Arrays.asList(new Object(), expectedObject);
 
         ListDoesNotContain<Object> listDoesNotContain = new ListDoesNotContain<Object>(expectedObject);
 
@@ -44,7 +44,7 @@ public class ListDoesNotContainTest {
 
     @Test
     public void listDoesNotContainMultipleObjects() throws Exception {
-        ArrayList<Object> list = createListWithObjects(new Object());
+        List<Object> list = Arrays.asList(new Object());
 
         ListDoesNotContain<Object> listDoesNotContain = new ListDoesNotContain<Object>(expectedObject,expectedObject2);
 
@@ -53,7 +53,7 @@ public class ListDoesNotContainTest {
 
     @Test
     public void listContainsOneOfTheObjects() throws Exception {
-        ArrayList<Object> list = createListWithObjects(expectedObject, new Object());
+        List<Object> list = Arrays.asList(expectedObject, new Object());
 
         ListDoesNotContain<Object> listDoesNotContain = new ListDoesNotContain<Object>(expectedObject,expectedObject2);
 

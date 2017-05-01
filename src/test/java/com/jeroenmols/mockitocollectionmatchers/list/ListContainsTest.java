@@ -2,9 +2,9 @@ package com.jeroenmols.mockitocollectionmatchers.list;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-import static com.jeroenmols.mockitocollectionmatchers.list.testhelpers.CollectionHelpers.createListWithObjects;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
@@ -17,7 +17,7 @@ public class ListContainsTest {
 
     @Test
     public void listWithSingleObject() throws Exception {
-        ArrayList<Object> list = createListWithObjects(expectedObject);
+        List<Object> list = Arrays.asList(expectedObject);
 
         ListContains<Object> listContains = new ListContains<Object>(expectedObject);
 
@@ -25,8 +25,8 @@ public class ListContainsTest {
     }
 
     @Test
-    public void listDoesntContainObject() throws Exception {
-        ArrayList<Object> list = createListWithObjects(new Object());
+    public void listDoesNotContainObject() throws Exception {
+        List<Object> list = Arrays.asList(new Object());
 
         ListContains<Object> listContains = new ListContains<Object>(expectedObject);
 
@@ -35,7 +35,7 @@ public class ListContainsTest {
 
     @Test
     public void listWithMultipleObjects() throws Exception {
-        ArrayList<Object> list = createListWithObjects(new Object(), expectedObject);
+        List<Object> list = Arrays.asList(new Object(), expectedObject);
 
         ListContains<Object> listContains = new ListContains<Object>(expectedObject);
 
@@ -44,7 +44,7 @@ public class ListContainsTest {
 
     @Test
     public void listContainsMultipleObjects() throws Exception {
-        ArrayList<Object> list = createListWithObjects(expectedObject, expectedObject2);
+        List<Object> list = Arrays.asList(expectedObject, expectedObject2);
 
         ListContains<Object> listContains = new ListContains<Object>(expectedObject,expectedObject2);
 
@@ -52,8 +52,8 @@ public class ListContainsTest {
     }
 
     @Test
-    public void listDoenstContainAllObjects() throws Exception {
-        ArrayList<Object> list = createListWithObjects(expectedObject, new Object());
+    public void listDoesNotContainAllObjects() throws Exception {
+        List<Object> list = Arrays.asList(expectedObject, new Object());
 
         ListContains<Object> listContains = new ListContains<Object>(expectedObject,expectedObject2);
 
@@ -66,5 +66,4 @@ public class ListContainsTest {
 
         assertThat(listContains.toString()).contains(expectedObject.toString());
     }
-
 }

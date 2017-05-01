@@ -23,7 +23,7 @@ import java.util.List;
 /**
  * @author Jeroen Mols on 11/09/16.
  */
-public class ListContains<T> implements ArgumentMatcher<List> {
+public class ListContains<T> implements ArgumentMatcher<List<T>> {
 
     private final T[] objects;
 
@@ -31,7 +31,7 @@ public class ListContains<T> implements ArgumentMatcher<List> {
         this.objects = objects;
     }
 
-    public boolean matches(List list) {
+    public boolean matches(List<T> list) {
         for (T object : objects) {
             if(!list.contains(object)) return false;
         }

@@ -28,11 +28,11 @@ import static org.mockito.ArgumentMatchers.argThat;
 
 public class ListMatchers {
 
-    public static <K> List listContains(K... object) {
+    public static <K> List<K> listContains(K... object) {
         return argThat(new ListContains<K>(object));
     }
 
-    public static <K> List listContains(K object, int index) {
+    public static <K> List<K> listContains(K object, int index) {
         return argThat(new ListContainsAtIndex<K>(object, index));
     }
 
@@ -40,11 +40,11 @@ public class ListMatchers {
         return argThat(new ListContainsNull());
     }
 
-    public static <K> List listDoesNotContain(K... object) {
+    public static <K> List<K> listDoesNotContain(K... object) {
         return argThat(new ListDoesNotContain<K>(object));
     }
 
-    public static <K> List listDoesNotContain(K object, int index) {
+    public static <K> List<K> listDoesNotContain(K object, int index) {
         return argThat(new ListDoesNotContainAtIndex<K>(object, index));
     }
 

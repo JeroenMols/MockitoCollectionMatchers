@@ -2,9 +2,9 @@ package com.jeroenmols.mockitocollectionmatchers.list;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-import static com.jeroenmols.mockitocollectionmatchers.list.testhelpers.CollectionHelpers.createListWithObjects;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
@@ -16,15 +16,15 @@ public class ListContainsAtIndexTest {
 
     @Test
     public void listContainsValueAtIndex() throws Exception {
-        ArrayList<Object> list = createListWithObjects(new Object(), expectedObject);
+        List<Object> list = Arrays.asList(new Object(), expectedObject);
         ListContainsAtIndex<Object> containsAtIndex = new ListContainsAtIndex<Object>(expectedObject, 1);
 
         assertThat(containsAtIndex.matches(list)).isTrue();
     }
 
     @Test
-    public void listDoesntContainValueAtIndex() throws Exception {
-        ArrayList<Object> list = createListWithObjects(new Object(), new Object());
+    public void listDoesNotContainValueAtIndex() throws Exception {
+        List<Object> list = Arrays.asList(new Object(), new Object());
         ListContainsAtIndex<Object> containsAtIndex = new ListContainsAtIndex<Object>(expectedObject, 1);
 
         assertThat(containsAtIndex.matches(list)).isFalse();

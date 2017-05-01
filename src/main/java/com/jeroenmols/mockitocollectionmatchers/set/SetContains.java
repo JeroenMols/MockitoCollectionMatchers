@@ -23,7 +23,7 @@ import java.util.Set;
 /**
  * @author Jeroen Mols on 11/09/16.
  */
-public class SetContains<T> implements ArgumentMatcher<Set> {
+public class SetContains<T> implements ArgumentMatcher<Set<T>> {
 
     private final T object;
 
@@ -31,7 +31,7 @@ public class SetContains<T> implements ArgumentMatcher<Set> {
         this.object = object;
     }
 
-    public boolean matches(Set set) {
+    public boolean matches(Set<T> set) {
         return set.contains(object);
     }
 

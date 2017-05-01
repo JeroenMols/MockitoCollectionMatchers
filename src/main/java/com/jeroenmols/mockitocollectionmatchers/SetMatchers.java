@@ -28,7 +28,7 @@ import static org.mockito.ArgumentMatchers.argThat;
 
 public class SetMatchers {
 
-    public static <K> Set setContains(K object) {
+    public static <K> Set<K> setContains(K object) {
         return argThat(new SetContains<K>(object));
     }
 
