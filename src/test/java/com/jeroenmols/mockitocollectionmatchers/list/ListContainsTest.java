@@ -46,7 +46,7 @@ public class ListContainsTest {
     public void listContainsMultipleObjects() throws Exception {
         ArrayList<Object> list = createListWithObjects(expectedObject, expectedObject2);
 
-        ListContains<Object> listContains = new ListContains<Object>(expectedObject,expectedObject2);
+        ListContains<Object> listContains = new ListContains<Object>(expectedObject, expectedObject2);
 
         assertThat(listContains.matches(list)).isTrue();
     }
@@ -55,7 +55,7 @@ public class ListContainsTest {
     public void listDoenstContainAllObjects() throws Exception {
         ArrayList<Object> list = createListWithObjects(expectedObject, new Object());
 
-        ListContains<Object> listContains = new ListContains<Object>(expectedObject,expectedObject2);
+        ListContains<Object> listContains = new ListContains<Object>(expectedObject, expectedObject2);
 
         assertThat(listContains.matches(list)).isFalse();
     }
@@ -67,4 +67,10 @@ public class ListContainsTest {
         assertThat(listContains.toString()).contains(expectedObject.toString());
     }
 
+    @Test
+    public void errorMessageContainsMultipleObjects() throws Exception {
+        ListContains<Object> listContains = new ListContains<Object>(expectedObject, expectedObject2);
+
+        assertThat(listContains.toString()).contains("all objects");
+    }
 }

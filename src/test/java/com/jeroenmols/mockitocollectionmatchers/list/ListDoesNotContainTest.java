@@ -46,7 +46,7 @@ public class ListDoesNotContainTest {
     public void listDoesNotContainMultipleObjects() throws Exception {
         ArrayList<Object> list = createListWithObjects(new Object());
 
-        ListDoesNotContain<Object> listDoesNotContain = new ListDoesNotContain<Object>(expectedObject,expectedObject2);
+        ListDoesNotContain<Object> listDoesNotContain = new ListDoesNotContain<Object>(expectedObject, expectedObject2);
 
         assertThat(listDoesNotContain.matches(list)).isTrue();
     }
@@ -55,7 +55,7 @@ public class ListDoesNotContainTest {
     public void listContainsOneOfTheObjects() throws Exception {
         ArrayList<Object> list = createListWithObjects(expectedObject, new Object());
 
-        ListDoesNotContain<Object> listDoesNotContain = new ListDoesNotContain<Object>(expectedObject,expectedObject2);
+        ListDoesNotContain<Object> listDoesNotContain = new ListDoesNotContain<Object>(expectedObject, expectedObject2);
 
         assertThat(listDoesNotContain.matches(list)).isFalse();
     }
@@ -65,6 +65,13 @@ public class ListDoesNotContainTest {
         ListDoesNotContain<Object> listDoesNotContain = new ListDoesNotContain<Object>(expectedObject);
 
         assertThat(listDoesNotContain.toString()).contains(expectedObject.toString());
+    }
+
+    @Test
+    public void errorMessageContainsMultipleObjects() throws Exception {
+        ListDoesNotContain<Object> listDoesNotContain = new ListDoesNotContain<Object>(expectedObject, expectedObject2);
+
+        assertThat(listDoesNotContain.toString()).contains("one or more objects");
     }
 
 }
